@@ -362,6 +362,46 @@ PRODUCT_COPY_FILES += \
     device/lge/hammerhead/init.hammerhead.diag.rc.user:root/init.hammerhead.diag.rc
 endif
 
+# Nexmon Binaries
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/nexmon/airbase-ng:system/xbin/airbase-ng \
+    $(LOCAL_PATH)/nexmon/aircrack-ng:system/xbin/aircrack-ng \
+    $(LOCAL_PATH)/nexmon/airdecap-ng:system/xbin/airdecap-ng \
+    $(LOCAL_PATH)/nexmon/aireplay-ng:system/xbin/aireplay-ng \
+    $(LOCAL_PATH)/nexmon/airodump-ng:system/xbin/airodump-ng \
+    $(LOCAL_PATH)/nexmon/airolib-ng:system/xbin/airolib-ng \
+    $(LOCAL_PATH)/nexmon/airserv-ng:system/xbin/airserv-ng \
+    $(LOCAL_PATH)/nexmon/airtun-ng:system/xbin/airtun-ng \
+    $(LOCAL_PATH)/nexmon/besside-ng:system/xbin/besside-ng \
+    $(LOCAL_PATH)/nexmon/buddy-ng:system/xbin/buddy-ng \
+    $(LOCAL_PATH)/nexmon/dhdutil:system/xbin/dhdutil \
+    $(LOCAL_PATH)/nexmon/easside-ng:system/xbin/easside-ng \
+    $(LOCAL_PATH)/nexmon/ivstools:system/xbin/ivstools \
+    $(LOCAL_PATH)/nexmon/iw:system/xbin/iw \
+    $(LOCAL_PATH)/nexmon/iwconfig:system/xbin/iwconfig \
+    $(LOCAL_PATH)/nexmon/iwlist:system/xbin/iwlist \
+    $(LOCAL_PATH)/nexmon/iwpriv:system/xbin/iwpriv \
+    $(LOCAL_PATH)/nexmon/kstats:system/xbin/kstats \
+    $(LOCAL_PATH)/nexmon/makeivs-ng:system/xbin/makeivs-ng\
+    $(LOCAL_PATH)/nexmon/mdk3:system/xbin/mdk3 \
+    $(LOCAL_PATH)/nexmon/nc:system/xbin/nc \
+    $(LOCAL_PATH)/nexmon/nexutil:system/xbin/nexutil \
+    $(LOCAL_PATH)/nexmon/packetforge-ng:system/xbin/packetforge-ng \
+    $(LOCAL_PATH)/nexmon/tcpdump:system/xbin/tcpdump \
+	$(LOCAL_PATH)/nexmon/tkiptun-ng:system/xbin/tkiptun-ng \
+	$(LOCAL_PATH)/nexmon/wesside-ng:system/xbin/wesside-ng \
+	$(LOCAL_PATH)/nexmon/wpaclean:system/xbin/wpaclean \
+    $(LOCAL_PATH)/nexmon/monstart-nh:system/xbin/monstart-nh \
+    $(LOCAL_PATH)/nexmon/monstop-nh:system/xbin/monstop-nh
+
+# Nexmon Lib files (doesn't start when copying to system/lib)
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/nexmon/libcrypto.so:system/xbin/libcrypto.so \
+	$(LOCAL_PATH)/nexmon/libfakeioctl.so:system/xbin/libfakeioctl.so \
+    	$(LOCAL_PATH)/nexmon/libfakeioctlkali.so:system/xbin/libfakeioctlkali.so \
+	$(LOCAL_PATH)/nexmon/libsqlite.so:system/xbin/libsqlite.so \
+	$(LOCAL_PATH)/nexmon/libssl.so:system/xbin/libssl.so
+
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
